@@ -2,8 +2,8 @@
 
 ## Student Details
 
-Name: THOTA SHASHANK  
-Registration Number: 252U1R1243  
+Name: YANAMALA SREEDHAR
+Registration Number: 252U1R1260
 Section: CSE-2E(211) 
 
 ---
