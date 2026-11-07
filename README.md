@@ -2,7 +2,7 @@
 
 ## Student Details
 
-Name: YANAMALA SREEDHAR
+Name: YANAMALA SREEDHAR  
 Registration Number: 252U1R1260
 Section: CSE-2E(211) 
 
