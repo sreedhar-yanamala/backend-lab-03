@@ -13,7 +13,7 @@
     "backend",
     "lab-03"
   ],
-  "author": "THOTA SHASHANK",
+  "author": "YANAMALA SREEDHAR",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
