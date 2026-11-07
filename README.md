@@ -38,6 +38,21 @@ Key objectives include:
 
 ---
 
+## Project Structure
+
+```text
+lab-03/
+  ├── app.js
+  ├── database.js
+  ├── package.json
+  ├── .gitignore
+  ├── README.md
+  ├── goodreads.db
+  └── screenshots/
+```
+
+---
+
 ## How to Run
 
 ### 1. Install dependencies
