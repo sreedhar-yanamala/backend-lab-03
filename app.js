@@ -8,8 +8,7 @@
 
 const express = require("express");
 const path = require("path");
-const { open } = require("sqlite");
-const sqlite3 = require("sqlite3");
+const { initializeDB } = require("./database");
 
 const app = express();
 
@@ -25,9 +24,6 @@ app.use((err, req, res, next) => {
   }
   next();
 });
-
-// Path to the SQLite database file
-const dbPath = path.join(__dirname, "goodreads.db");
 
 // Database instance reference
 let db = null;
@@ -47,21 +43,8 @@ let db = null;
  */
 const initializeDBAndServer = async () => {
   try {
-    // Open SQLite database connection
-    db = await open({
-      filename: dbPath,
-      driver: sqlite3.Database,
-    });
-
-    // Ensure the 'books' table exists
-    await db.run(`
-      CREATE TABLE IF NOT EXISTS books (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL,
-        author TEXT NOT NULL,
-        price INTEGER NOT NULL
-      );
-    `);
+    // Open SQLite database connection using database module
+    db = await initializeDB();
 
     // Seed sample books if the table is currently empty
     const bookCount = await db.get("SELECT COUNT(*) AS count FROM books;");
